@@ -1,0 +1,391 @@
+/*
+ 			*** Folha de estilo - Compre Sempre     ****
+			*** Desenvolvido por SoftSol   			****
+			
+			*** Todos os Direitos Reservados		****
+			*** Desenvolvedor Wesley Martins		****
+*/
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	
+}
+
+/*
+Css do Calendário
+*/
+ .dia {font-family: helvetica, arial; font-size: 8pt; color: #FFFFFF}
+    .data {font-family: helvetica, arial; font-size: 8pt; text-decoration:none; color:#191970}
+    .mes {font-family: helvetica, arial; font-size: 8pt}
+    .Cabecalho_Calendario {font-family: helvetica, arial; font-size: 10pt; color: #000000; text-decoration:none; font-weight:bold}
+
+#logo {
+	width: 15%;
+	height: 110px;
+	float: left;
+	
+}
+
+#topo {
+	width: auto;
+	height: 30px;
+	background-color:#FFFAF0;
+}
+#fundo{
+	background-image: url("imagens/paginas/carrinho.png");
+	background-repeat:no-repeat;
+	background-position:right;
+	height: 500px;
+	
+}
+
+#dicas {
+	width: auto;
+	height: 50px;
+	
+}
+#aviso {
+	width: auto;
+	height: 40px;
+	font-weight: bold;
+	
+}
+
+#menu {
+	width: auto;
+	height: 30px;
+	background-color: #6E6F73;
+}
+/*css do banner*/
+.easy-accordion{display:block;position:relative;overflow:hidden;padding:0;margin:0}
+		.easy-accordion dt,.easy-accordion dd{margin:0;padding:0}
+		.easy-accordion dt,.easy-accordion dd{position:absolute}
+		.easy-accordion dt{margin-bottom:0;margin-left:0;z-index:5;/* Safari */ -webkit-transform: rotate(-90deg); /* Firefox */ -moz-transform: rotate(-90deg);-moz-transform-origin: 20px 0px;  /* Internet Explorer */ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);cursor:pointer;}
+		.easy-accordion dd{z-index:1;opacity:0;overflow:hidden}
+		.easy-accordion dd.active{opacity:1;}
+		.easy-accordion dd.no-more-active{z-index:2;opacity:1}
+		.easy-accordion dd.active{z-index:3}
+		.easy-accordion dd.plus{z-index:4}
+		.easy-accordion .slide-number{position:absolute;bottom:0;left:10px;font-weight:normal;font-size:1.1em;/* Safari */ -webkit-transform: rotate(90deg); /* Firefox */ -moz-transform: rotate(90deg);  /* Internet Explorer */ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);}
+		 
+		 
+		/* FEEL FREE TO CUSTOMIZE THE FOLLOWING RULES */
+		
+		dd p{line-height:120%}
+		/*caixa branca - fundo do slide*/
+		#accordion-3{width:1200px;height:200px;padding:30px;background:#fff;border:1px solid #FF8C00}
+	
+		#accordion-3 h2{font-size:2.5em;margin-top:10px}
+		/*Referencia ao slide*/
+		#accordion-3 dl{width:1100px;height:200px}	
+		#accordion-3 dt{height:56px;line-height:44px;text-align:left;padding:10px 15px 0 10px;font-size:1.1em;font-weight:bold;font-family: Tahoma, Geneva, sans-serif;text-transform:uppercase;letter-spacing:1px;background:#fff url(images/slide-title-inactive-2.jpg) 0 0 no-repeat;color:#8B8989}
+		#accordion-3 dt.active{cursor:pointer;color:#fff;background:#fff url(imagens/slide-title-active-2.jpg) 0 0 no-repeat}
+		#accordion-3 dt.hover{color:#68889b;}
+		#accordion-3 dt.active.hover{color:#fff}
+		#accordion-3 dd{padding:25px;background:url(images/slide.jpg) bottom left repeat-x;border:1px solid #FF8C00;border-left:0;margin-right:3px}
+		#accordion-3 .slide-number{color:#68889b;left:13px;font-weight:bold}
+		#accordion-3 .active .slide-number{color:#fff}
+		#accordion-3 a{color:#68889b}
+		#accordion-3 dd img{float:left;margin:0 0 0 0px;position:relative;top:-20px}
+		/*Termino - css do banner*/
+		
+		
+#departamentos {
+	width: 20%;
+	height: 1150px;
+	float: left;
+	background-image:url("imagens/menu.png");
+	color: #6E6F73;
+	border-radius: 1em;
+	box-shadow: #6E6F73 2px 2px 2px 2px;
+}
+
+#banner {
+	width: auto;
+	height: 250px;
+	background-color: white;
+}
+
+#conteudo {
+	width: auto;
+	height: 900px;
+	background-color: white;
+	text-align: left;
+	text-indent: 20px;
+	margin: 10px 10px 10px 10px;
+	border-radius: 1em;
+	box-shadow: #6E6F73 5px 10px 10px 10px;
+	color: #363636;
+}
+#termos{
+	text-align: justify;
+	text-indent: 40px;
+	/*margin: 20px;
+	padding-left:40px;
+	padding-right: 40px;*/
+	color: gray;
+	font-size: 12px;
+	font-style: italic;
+	font-family: times new roman;
+	line-height: 20px;	
+	
+}
+.titulo{
+	font-weight: bold;	
+}
+input:FOCUS, textarea:FOCUS {
+	background-color: white;
+	border: 1px solid black;
+	-moz-border-radius: 2px;
+	padding: 1px;
+}
+input, label, textarea {
+	display: block;
+}
+input.qtde {
+	display: inline;
+	width: 2em;
+}
+input.check{display: inline;width: 2em;}
+.hint {
+	color: green;
+	font-size: 10pt;
+}
+label.error {
+	color:red;	
+}
+fieldset {
+	border:none;
+	padding: 10px;
+	width: 700px;
+	border-top: 3px solid #CDAF95;
+}
+
+fieldset legend {
+	border: 1px solid #CDAF95;
+	-moz-border-radius: 3px;
+	background-color:none;
+	font-weight: bold;
+	padding: 3px;
+	margin-bottom: 15px;
+	font-size: 16pt;
+	color: #CDAF95;
+}
+
+table thead {
+	background-color: #CDAF95;
+	color: white;
+	font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+	background-color: #EEEEE0;
+}
+table tbody td {
+	vertical-align: text-bottom;	
+}
+table tfoot th {
+	margin: 0;
+	padding: 7px 6px 0;
+	background: #CDAF95 repeat-x 0 -110px;
+	line-height: 100%;
+	border-radius: 2em;
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0, .4);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0, .4);
+	
+	
+}
+
+#destaque {
+	width: auto;
+	height: 150px;
+	background-color: white;
+	margin: 10px 10px 10px 10px;
+	border-radius: 1em;
+	box-shadow: #6E6F73 10px 10px 10px;
+}
+
+#softsol {
+	width: auto;
+	height: 150px;
+}
+
+#rodape {
+	text-align: center;
+}
+
+#redes {
+	width: auto;
+	height: 100px;
+	text-align: center;
+	color: #6E6F73;
+	
+}
+ table thead tr {  
+    background-color: #EEE9E9;  
+    }  
+    table tr.even {  
+      background-color: #CDC9C9;  
+    }
+    /*Titulo da Tabela*/
+    table th.sortable {
+    background-color: #CDC5BF;
+     }
+     /*Coluna que está atualmente ordenada*/
+     table th.sorted {
+     background-color: #EEEEE0;
+     }
+     table a{
+     color: #828282;
+     }
+     a{
+     color: #828282;
+     }
+     
+     /*Formatando formulário
+
+     
+    
+form{
+width:400px;
+margin:0 auto 20px;
+background:#dbdbdb;
+border:1px #ccc ridge;
+padding:30px;
+}
+fieldset{
+margin:10px 0;
+padding:0 0 10px 16px;
+}
+fieldset legend{
+font-size:1.3em;
+padding:0 5px;
+color:#666;/* se não definir no IE será renderizado #0046d5(azul) 
+}
+label{
+float:left;
+clear:left;
+width:90px;
+display:block;
+text-align:right;
+padding:4px 4px 0 0;
+margin:4px 0;
+height:18px;
+
+}
+input, select,  textarea{
+width:200px;
+height:20px;
+float:left;
+clear:right;
+padding:0;
+border:1px solid #666;
+margin:4px 0;
+
+}
+
+ select{
+width:auto;
+height:22px;&nbsp; 
+}
+
+ textarea{
+height:70px;
+}
+label{
+width:180px;
+float:left;
+padding:0;
+margin:3px 0;
+vertical-align:baseline;
+}
+label input{
+position:relative;
+top:2px; 
+margin:0 4px 0 0;
+height:13px;
+vertical-align:baseline;
+}
+
+button{
+
+}
+*/
+
+/* Rodapé ======================================================*/
+		
+	.itensRodape{
+		margin-left: 3% !important;
+	}
+	
+	.rodape ul,li {
+	    margin: 0;
+	    padding: 0;
+	    border: 0;
+	    outline: 0;
+	    font-weight: inherit;
+	    font-style: inherit;
+	    font-size: 100%;
+	    font-family: inherit;
+	    vertical-align: top;
+	    font-family: Arial, "Trebuchet MS", Helvetica, sans-serif;
+	    color: orange;
+	    font-weight: bold;	
+	}
+	.rodape ol, ul {
+   		list-style: none;
+	}
+	
+	.rodape {
+	    min-width:985px;	
+		width: 100%;
+		border: solid 0px blue;
+		margin-top: 10px;
+	}
+	.box_conteudo_rodape { 
+	    height: 120px; 
+	    padding: 18px 0 0 2px;
+	    border: solid 0px blue; 
+	} 
+	
+	.itemRodape{
+		float:left;
+		width: 20%;
+	}
+	
+	ul.listaMenu_rodape li { 
+	    font-size: 0.8em; 
+	    line-height: 1em; 
+	    border: solid 0px blue; 
+	} 
+	 
+	ul.listaMenu_rodape { 
+	    width: 17%;
+	    display: inline; 
+	    border: solid 0px red; 
+	} 
+	 
+	a.tituloItem_menu:link,  
+	a.tituloItem_menu:visited,  
+	a.tituloItem_menu:active, 
+	a.tituloItem_menu:hover { 
+	    font: 1.3em Arial, "Trebuchet MS", Helvetica, sans-serif; 
+	    color: black;
+	    text-decoration: none; 
+	} 
+	 
+	a.item_menu:link,  
+	a.item_menu:visited,  
+	a.item_menu:active { 
+	    font: 0.9em Arial, "Trebuchet MS", Helvetica, sans-serif; 
+	    color: #6E6F73;
+	    text-decoration: none; 
+	} 
+	 
+	a.item_menu:hover { 
+	    color: black; 
+	    text-decoration: underline; 
+	}

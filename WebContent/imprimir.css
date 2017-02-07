@@ -1,0 +1,224 @@
+/*
+ 			*** Folha de estilo - Compre Sempre     ****
+			*** Desenvolvido por SoftSol   			****
+			
+			*** Todos os Direitos Reservados		****
+			*** Desenvolvedor Wesley Martins		****
+*/
+* {
+	display: nome;
+	
+}
+
+/*
+Css do Calendário
+*/
+ .dia {display: nome;}
+    .data {display: nome;}
+    .mes {display: nome;}
+    .Cabecalho_Calendario {display: nome;}
+
+#logo {
+	display: nome;
+	
+}
+
+#topo {
+	display: nome;
+}
+#fundo{
+	display: nome;
+	
+}
+
+#dicas {
+	display: nome;
+	
+}
+#aviso {
+	display: nome;
+	
+}
+
+#menu {
+	display: nome;
+}
+
+.easy-accordion{display: nome;}
+		.easy-accordion dt,.easy-accordion dd{display: nome;}
+		.easy-accordion dt,.easy-accordion dd{display: nome;}
+		.easy-accordion dt{display: nome;}
+		.easy-accordion dd{display: nome;}
+		.easy-accordion dd.active{display: nome;}
+		.easy-accordion dd.no-more-active{display: nome;}
+		.easy-accordion dd.active{display: nome;}
+		.easy-accordion dd.plus{display: nome;}
+		.easy-accordion .slide-number{display: nome;}
+		 
+		 
+		/* FEEL FREE TO CUSTOMIZE THE FOLLOWING RULES */
+		
+		dd p{display: nome;}
+		/*caixa branca - fundo do slide*/
+		#accordion-3{display: nome;}
+	
+		#accordion-3 h2{display: nome;}
+		/*Referencia ao slide*/
+		#accordion-3 dl{display: nome;}	
+		#accordion-3 dt{display: nome;}
+		#accordion-3 dt.active{display: nome;}
+		#accordion-3 dt.hover{display: nome;}
+		#accordion-3 dt.active.hover{display: nome;}
+		#accordion-3 dd{display: nome;}
+		#accordion-3 .slide-number{display: nome;}
+		#accordion-3 .active .slide-number{display: nome;}
+		#accordion-3 a{display: nome;}
+		#accordion-3 dd img{display: nome;}
+		/*Termino - css do banner*/
+		
+		
+#departamentos {
+	display: nome;
+	}
+
+#banner {
+	display: nome;
+}
+
+#conteudo {
+	display: nome;
+}
+#termos{
+	display: nome;
+}
+.titulo{
+	display: nome;	
+}
+input:FOCUS, textarea:FOCUS {
+	display: nome;
+}
+input, label, textarea {
+	display: nome;
+}
+input.qtde {
+	display: nome;
+}
+.hint {
+	display: nome;
+}
+label.error {
+	display: nome;	
+}
+fieldset {
+	display: nome;
+}
+
+fieldset legend {
+	display: nome;
+}
+
+table thead {
+	display: nome;
+}
+
+table tbody tr:nth-child(even) {
+	display: nome;
+	}
+table tbody td {
+	display: nome;	
+}
+table tfoot th {
+	display: nome;
+	
+	
+}
+
+#destaque {
+	display: nome;
+}
+
+#softsol {
+	display: nome;
+}
+
+#rodape {
+	display: nome;
+}
+
+#redes {
+	display: nome;
+	
+}
+ table thead tr {  
+    display: nome;  
+    }  
+    table tr.even {  
+      display: nome;  
+    }
+    /*Titulo da Tabela*/
+    table th.sortable {
+display: nome;
+     }
+     /*Coluna que está atualmente ordenada*/
+     table th.sorted {
+     display: nome;
+     }
+     table a{
+     display: nome;
+     }
+     a{
+     display: nome;
+     }
+     
+     /*Formatando formulário
+
+     
+    
+/* Rodapé ======================================================*/
+		
+	.itensRodape{
+display: nome;
+	}
+	
+	.rodape ul,li {
+	    display: nome;	
+	}
+	.rodape ol, ul {
+   		display: nome;
+	}
+	
+	.rodape {
+	    display: nome;
+	}
+	.box_conteudo_rodape { 
+	    display: nome; 
+	} 
+	
+	.itemRodape{
+		display: nome;
+	}
+	
+	ul.listaMenu_rodape li { 
+	    display: nome; 
+	} 
+	 
+	ul.listaMenu_rodape { 
+	    display: nome; 
+	} 
+	 
+	a.tituloItem_menu:link,  
+	a.tituloItem_menu:visited,  
+	a.tituloItem_menu:active, 
+	a.tituloItem_menu:hover { 
+	    display: nome; 
+	} 
+	 
+	a.item_menu:link,  
+	a.item_menu:visited,  
+	a.item_menu:active { 
+	    display: nome; 
+	} 
+	 
+	a.item_menu:hover { 
+	    display: nome; 
+	}

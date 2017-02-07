@@ -1,0 +1,63 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+<property name="hibernate.connection.username">
+csempre
+</property>
+<property name="hibernate.connection.password">
+%+Pre16!
+</property>
+<property name="hibernate.connection.url">
+jdbc:mysql://localhost/csempre_db
+</property>
+
+<!-- configuration pool via c3p0--> 
+<property name="c3p0.acquire_increment">1</property> 
+<property name="c3p0.idle_test_period">100</property> <!-- seconds --> 
+<property name="c3p0.max_size">100</property> 
+<property name="c3p0.max_statements">0</property> 
+<property name="c3p0.min_size">10</property> 
+<property name="c3p0.timeout">100</property> <!-- seconds --> 
+<!-- DEPRECATED very expensive property name="c3p0.validate>--> 
+
+<property name="hibernate.connection.driver_class">
+com.mysql.jdbc.Driver
+</property>
+<property name="hibernate.dialect">
+org.hibernate.dialect.MySQL5InnoDBDialect
+</property>
+<property name="hibernate.hbm2ddl.auto">update</property>
+<property name="show_sql">true</property>
+<property name="format_sql">true</property>
+<mapping class="br.com.softsol.compresempre.modelo.Acesso"/>
+<mapping class="br.com.softsol.compresempre.modelo.Administrador"/>
+<mapping class="br.com.softsol.compresempre.modelo.Auditoria"/>
+<mapping class="br.com.softsol.compresempre.modelo.Atividade"/>
+<mapping class="br.com.softsol.compresempre.modelo.Bairro"/>
+<mapping class="br.com.softsol.compresempre.modelo.Cidade"/>
+<mapping class="br.com.softsol.compresempre.modelo.CodigoFiscalOperacoesPrestacoes"/>
+<mapping class="br.com.softsol.compresempre.modelo.CodigoSituacaoTributacao"/>
+<mapping class="br.com.softsol.compresempre.modelo.Comissao"/>
+<mapping class="br.com.softsol.compresempre.modelo.Desconto"/>
+<mapping class="br.com.softsol.compresempre.modelo.Empresa"/>
+<mapping class="br.com.softsol.compresempre.modelo.Estado"/>
+<mapping class="br.com.softsol.compresempre.modelo.FormaPagamento"/>
+<mapping class="br.com.softsol.compresempre.modelo.Fornecedor"/>
+<mapping class="br.com.softsol.compresempre.modelo.Frete"/>
+<mapping class="br.com.softsol.compresempre.modelo.Grupo"/>
+<mapping class="br.com.softsol.compresempre.modelo.GrupoFornecedor"/>
+<mapping class="br.com.softsol.compresempre.modelo.Item"/>
+<mapping class="br.com.softsol.compresempre.modelo.MenorPreco"/>
+<mapping class="br.com.softsol.compresempre.modelo.Orcamento"/>
+<mapping class="br.com.softsol.compresempre.modelo.Produto"/>
+<mapping class="br.com.softsol.compresempre.modelo.ProdutoDestaque"/>
+<mapping class="br.com.softsol.compresempre.modelo.ProdutoEmpresa"/>
+<mapping class="br.com.softsol.compresempre.modelo.RegimeTributacao"/>
+<mapping class="br.com.softsol.compresempre.modelo.Subgrupo"/>
+<mapping class="br.com.softsol.compresempre.modelo.TipoProduto"/>
+<mapping class="br.com.softsol.compresempre.modelo.UnidadeEstoque"/>
+<mapping class="br.com.softsol.compresempre.modelo.Usuario"/>
+</session-factory>
+</hibernate-configuration>

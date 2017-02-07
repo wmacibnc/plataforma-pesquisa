@@ -1,0 +1,24 @@
+     /* COR SIM, COR NÃO */ 
+     table{
+     text-align: center;
+     } 
+    table thead tr {  
+    background-color: #EEE9E9;  
+    }  
+    table tr.even {  
+      background-color: #CDC9C9;  
+    }
+    /*Titulo da Tabela*/
+    table th.sortable {
+    background-color: #CDC5BF;
+     }
+     /*Coluna que está atualmente ordenada*/
+     table th.sorted {
+     background-color: #EEEEE0;
+     }
+     table a{
+     color: #458B74;
+     }
+     a{
+     color: #458B74;
+     }

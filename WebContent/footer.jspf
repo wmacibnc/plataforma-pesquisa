@@ -1,0 +1,99 @@
+<html>
+<head>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#liquid1').liquidcarousel({
+			height : 129,
+			duration : 100,
+			hidearrows : false
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="footer">
+		<div id="destaque" align="center">
+			<div id="liquid1" class="liquid">
+				<span class="previous"></span>
+				<div class="wrapper">
+				
+					<ul>
+							<c:forEach items="${produtoDestaqueList}" var="produtoDestaque">
+								<li><a href="<c:url value="/produto/busca2?nome=${produtoDestaque.produto.nome }"/>"><img src="<c:url value="/subgrupo/${produtoDestaque.produto.subgrupo.id}/imagem"/>" align="left" width="88" height="126" /></a></li>
+							</c:forEach>
+					</ul>
+				</div>
+				<span class="next"></span>
+			</div>
+		</div>
+		<div id="softsol" align="center">
+			<a href="http://www.softsol.com.br"> <img alt="Compre Sempre"
+				src="<c:url value="/imagens/softsol.png"/>" align="top"></a>
+		</div>
+		<div id="rodape">
+		<div class="rodape"><!-- Início: Rodapé -->
+            <div class="box_conteudo_rodape">
+				<nav>
+	                <ul class="itensRodape">
+	                    <li class="itemRodape">
+
+	                        <p class="tituloItem_menu">Condições de Uso</p>
+	                        <ul class="listaMenu_rodape">
+
+	                            <li><a class="item_menu" href="<c:url value="/termosuso"/>">Termos de Uso</a></li>
+	                            <li><a class="item_menu"href="<c:url value="/politica"/>">Política de Privacidade </a></li>
+	                       </ul>	
+	                    </li>
+
+	                    <li class="itemRodape">
+	                        <p class="tituloItem_menu">Pra Você</p>
+	                        <ul class="listaMenu_rodape">
+	                            
+	                            <li><a class="item_menu" href="<c:url value="/usuarios/novo"/>">Cadastra-se</a></li>
+	                            <li><a class="item_menu" href="<c:url value="/usuarios/loginForm"/>">Login</a></li>
+	                        </ul>	
+	                    </li>
+	                    
+	                    <li class="itemRodape">
+	                        <p class="tituloItem_menu">Pra sua Empresa</p>
+	                        <ul class="listaMenu_rodape">
+	                            
+	                            <li><a class="item_menu" href="<c:url value="/filiacao"/>">Filie-se</a></li>
+	                           <li><a class="item_menu" href="<c:url value="/empresa/loginForm"/>">Login</a></li>
+	                            
+	                        </ul>	
+	                    </li>
+	                    
+	                    <li class="itemRodape">
+	                        <p class="tituloItem_menu">Atendimento</p>
+	                        <ul class="listaMenu_rodape">
+
+	                            <li><a class="item_menu" href="<c:url value="/duvidas"/>">Dúvidas Frequentes</a></li>
+	                            <li><a class="item_menu" href="<c:url value="/faleconosco"/>">Fale Conosco</a></li>
+								<li><a class="item_menu" href="<c:url value="/trabalheconosco"/>">Trabalhe Conosco</a></li>
+	                       </ul>		
+	                    </li>
+	                </ul>
+                </nav>
+            </div>
+            
+        </div>
+		<h4><font color="orange" size="30px">Compre</font><font color="#6E6F73" size="30px">Sempre</font></h4>
+		</div>
+		<div id="redes" align="left">
+		<a href="http://www.facebook.com.br/cscompresempre"> <img width="50" height="50"alt="Compre Sempre - Facebook" src="<c:url value="/imagens/redes/facebook.gif"/>"></a>
+		<a href="#"> <img width="49" height="50"alt="Compre Sempre - Twitter" src="<c:url value="/imagens/redes/twitter.gif"/>"></a>
+		<a href="#"> <img width="50" height="20"alt="Compre Sempre - You Tube" src="<c:url value="/imagens/redes/youtube.gif"/>"></a>
+		<h5>Copyright @ 2012 :. Todos os Direitos Reseverados - Compre Sempre</h5>
+		<h5>Desenvolvido e Administrador por Softsol | Contato: sac@softsol.com.br</h5>
+		</div>
+		<div id="validator" align="right">
+		<p>
+    <img src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" height="31" width="88">
+  </p>
+		</div>
+	</div>
+	
+
+</body>
+</html>

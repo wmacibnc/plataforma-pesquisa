@@ -1,0 +1,221 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://displaytag.sf.net" prefix="display" %>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<link rel="stylesheet" href="<c:url value="displaytag.css"/>" type="text/css"/>
+<title>CompreSempre - Vers&atilde;o 1.4.1</title>
+<link href="<c:url value="/estilo.css"/>" rel="stylesheet"type="text/css" media="all" />
+<link href="<c:url value="/liquidcarousel.css"/>" rel="stylesheet"	type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" media="screen" href="<c:url value="/dock-example1.css"/>">
+<link rel="shortcut icon" href="<c:url value="/favicon.ico"/>" type="image/x-icon" />
+<link href="<c:url value="/javascripts/jquery.autocomplete.css"/>"rel="stylesheet" type="text/css" media="screen" />
+<link href="<c:url value="/javascripts/calendar.css"/>"rel="stylesheet" type="text/css" media="screen" />
+<link href="<c:url value="/javascripts/jquery.fileupload-ui"/>"rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript"	src="<c:url value="/javascripts/jquery-1.3.2.min.js"/>"></script>
+<script type="text/javascript"	src="<c:url value="/javascripts/jquery.validate.min.js"/>"></script>
+<script type="text/javascript"	src="<c:url value="/javascripts/jquery.autocomplete.min.js"/>"></script>
+<script type="text/javascript"	src="<c:url value="/javascripts/jquery.puts.js"/>"></script>
+<script type="text/javascript"	src="<c:url value="/javascripts/jquery.blinds-0.9.js"/>"></script>
+<script type="text/javascript"	src="<c:url value="/javascripts/fisheye-iutil.min.js"/>"></script>
+<script type="text/javascript"	src="<c:url value="/javascripts/dock-example1.js"/>"></script>
+<script type="text/javascript"	src="<c:url value="/javascripts/stack-1.js"/>"></script>
+<script type="text/javascript"	src="<c:url value="/javascripts/jquery.liquidcarousel.pack.js"/>"></script>
+<script type="text/javascript"	src="<c:url value="/javascripts/utility.js"/>"></script>
+<script type="text/javascript"  src="<c:url value="/javascripts/jquery.easyAccordion.js"/>"></script>
+<script type="text/javascript"  src="<c:url value="/javascripts/calendar.js"/>"></script>
+<script type="text/javascript"	src="<c:url value="/javascripts/jquery.fileupload"/>"></script>
+<script type="text/javascript"	src="<c:url value="/javascripts/jquery.fileupload-ui"/>"></script>
+<fmt:setLocale value="pt_br"/>
+
+
+
+<!-- script do Banner -->
+<script type='text/javascript'>
+		$(document).ready(function() {
+		$(&quot;ul#topnav li&quot;).hover(function() {
+		$(this).css({ &#39;background&#39; : &#39;#1376c9 &#39;}); //Edite cor de fundo para o item da lista
+		$(this).find(&quot;span&quot;).show(); //subnav
+		} , function() { //on hover out...
+		$(this).css({ &#39;background&#39; : &#39;none&#39;});
+		$(this).find(&quot;span&quot;).hide();
+		});
+</script>
+
+<fmt:setLocale value="pt_br" />
+</head>
+
+<body>
+	<div id="logo">
+		<a href="<c:url value="/"/>"> <img alt="Compre Sempre" src="<c:url value="/imagens/logo.png"/>" align="top"></a>
+	</div>
+	<div id="topo">
+	<ul>
+		<c:forEach items="${errors}" var="error">
+			<li>${error.category } - ${error.message }</li>
+		</c:forEach>
+		</ul>
+	</div>
+	<div id="dicas">
+	<h4><font color="orange" size="30px">Compre</font><font color="#6E6F73" size="30px">Sempre</font> </h4>
+	</div>
+	
+	<div id="avisos" align="right">
+	
+	<c:if test="${administradorWeb.logado}">
+	<p>Ol&aacute;, Administrador: ${administradorWeb.nome}
+		<a href="<c:url value="/administracao"/>">Administracao</a>
+		<a href="<c:url value="/administrador/logout"/>">Sair</a>
+	</p>	
+	</c:if>
+	<c:if test="${empresaWeb.logado }">
+	<p>Ol&aacute;, Empresa ${empresaWeb.fantasia}
+		<a href="<c:url value="/administracao/empresa"/>">Administracao</a>
+		<a href="<c:url value="/empresa/logout"/>">Sair</a>
+	</p>
+	</c:if>
+	<c:if test="${usuarioWeb.logado }">
+		<p><a href="<c:url value="/administracao/usuario"/>">Administracao</a>
+		Ol&aacute;, Usuario: ${usuarioWeb.nome}
+	<a href="<c:url value="/logout"/>">Sair</a>
+	</p>
+	</c:if>
+	
+	<c:if test="${empty administradorWeb or not administradorWeb.logado}">
+	<c:if test="${empty empresaWeb or not empresaWeb.logado}">
+	<c:if test="${empty usuarioWeb or not usuarioWeb.logado}">
+	Voc&ecirc; n&atilde;o est&aacute; logado.
+	<a href="<c:url value="/login"/>"> <font color="orange">Entrar no sistema</font></a>
+	</c:if>
+	</c:if>
+	</c:if>
+	
+	<c:if test="${cidadeWeb.logado }">
+	 - Cidade: ${cidadeWeb.nome}
+	</c:if>
+	
+	<c:if test="${bairroWeb.logado }">
+	 - Bairro: ${bairroWeb.nome}
+	</c:if>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</div>
+			
+	
+	<div id="menu">
+		<!-- INICIO - MENU ============================================================ -->
+		<div id="dock">
+			<div class="dock-container">
+				<a class="dock-item" href="<c:url value="/"/>"><span>Home</span><img
+					src="<c:url value="/imagens/images/dock/home.png"/>" alt="home" /></a>
+				<a class="dock-item" href="<c:url value="/sobre"/>"><span>Sobre</span><img
+					src="<c:url value="/imagens/images/dock/compresempre.png"/>"
+					alt="Sobre" /></a> <a class="dock-item" href="<c:url value="/usuarios/novo"/>"><span>Cadastro</span><img
+					src="<c:url value="/imagens/images/dock/link.png"/>"
+					alt="cadastra-se" /></a> 
+					<a class="dock-item" href="<c:url value="/faleconosco"/>"><span>Contato</span><img
+					src="<c:url value="/imagens/images/dock/email.png"/>" alt="contato" /></a>
+			</div>
+			<!-- end div .dock-container -->
+		</div>
+		<!-- end div .dock #dock -->
+		<!-- FIM - MENU ============================================================ -->
+	</div>
+	<div id="departamentos" align="center">
+		<br></br>
+		<h2>Departamentos</h2>
+		<c:forEach items="${grupoList }" var="grupo">
+			
+					<h3> ${grupo.nome}</h3>
+			<p />
+			
+		</c:forEach>
+		<br />
+		<br />
+		<br />
+		<h4>Acesse www.cs10.com.br</h4>
+		
+		<p>
+		</p>
+	<h4>Seu ip:
+        <script type="text/javascript">
+function myIP() {  
+    if (window.XMLHttpRequest) xmlhttp = new XMLHttpRequest();  
+    else xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");  
+  
+    xmlhttp.open("GET","http://api.hostip.info/get_html.php",false);  
+    xmlhttp.send();  
+  
+    hostipInfo = xmlhttp.responseText.split("\n");  
+  
+    for (i=0; hostipInfo.length >= i; i++) {  
+        ipAddress = hostipInfo[i].split(":");  
+        if ( ipAddress[0] == "IP" ) return ipAddress[1];  
+    }  
+  
+    return false;  
+}  
+document.write(myIP());  
+</script>
+</h4>
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<!-- Botão curtir da página do facebook -->
+	 <iframe src="https://www.facebook.com/plugins/like.php?href=facebook.com/cscompresempre"
+        scrolling="yes" frameborder="0"
+        style="border:none; width:240px; height:450px"></iframe>
+   <!---->   
+   
+	</div>
+	<div id="banner" align="right">
+		<!--Div Slides do banner-->
+		<div id="accordion-3" align="left">
+			<dl>
+				<dt><font color="orange">Compre</font><font color="#6E6F73">Sempre</font></dt>
+				<dd>
+					<a href="<c:url value="/sobre"/>"><img
+						src="<c:url value="/imagens/banners/compresempre.png"/>" alt="home" /></a>
+				</dd>
+				<dt>Destaque</dt>
+				<dd>
+					<a href="<c:url value="/"/>"><img
+						src="<c:url value="/imagens/banners/destaque.png"/>" alt="home" /></a>
+				</dd>
+
+				<dt><font color="#6E6F73">Soft</font><font color="orange">Sol</font></dt>
+				<dd>
+					<a href="<c:url value="http://www.softsol.com.br"/>"><img
+						src="<c:url value="/imagens/banners/softsol.png"/>" alt="home" /></a>
+				</dd>
+				
+				<dt>Parcerias</dt>
+				<dd>
+					<a href="<c:url value="/"/>"><img src="<c:url value="/imagens/banners/campeao.png"/>" alt="home" /></a>
+				</dd>
+				
+				<dt class="active">Parcerias</dt>
+				<dd>
+					<a href="<c:url value="/"/>"><img src="<c:url value="/imagens/banners/fazendeiro.png"/>" alt="home" /></a>
+				</dd>
+				
+			</dl>
+		</div>
+
+	</div>
+
+
+</body>
+</html>
+
+
+
+
+
